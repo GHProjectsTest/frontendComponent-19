@@ -41,27 +41,6 @@ var init = function() {
   };
 
   client = new Las2peerWidgetLibrary("$Microservice_Url$/music", iwcCallback, '*');
-Y({
-  db: {
-    name: 'memory'
-  },
-  connector: {
-    name: 'websockets-client',
-    room: 'cae-room'
-  },
-  sourceDir: "http://y-js.org/bower_components",
-  share: {
-    p:'Text' 
-    intents: 'Map'
-  }
-}).then(function (y) {
-  window.yTextarea = y
-  y.share.p.bind(document.getElementById('p'))
- 
-}).catch(function(y) {
-  console.log("YJS failed to load");
-});
-
 
   $('#button_08186').on('click', function() {
     //start parameter initiation
